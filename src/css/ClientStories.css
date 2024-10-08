@@ -1,0 +1,77 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Why Work With Us Section */
+  .work-with-us-section {
+      padding: 50px 20px; /* Adjust padding for responsiveness */
+      background-color: #fff;
+    }
+    
+    .work-with-us-section h2 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .work-with-us-section p {
+      font-size: 18px;
+      color: #6c757d;
+      margin: 0 auto; /* Center the text */
+      max-width: 800px; /* Set a maximum width */
+      line-height: 1.6; /* Improve readability */
+    }
+    
+    .work-with-us-section .star {
+      color: #f5c518;
+      font-size: 20px;
+    }
+    
+    .work-with-us-section .action-buttons {
+      margin-top: 20px;
+    }
+    
+    .action-buttons button {
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    
+    
+    /* Client Stories Section */
+    .client-stories-section {
+      background-image: url('../assets/testimonials.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      padding: 100px 0;
+    }
+    
+    .client-stories-section h2 {
+      font-size: 36px;
+      color: white;
+      margin-bottom: 50px;
+    }
+    
+    .client-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+    
+    .client-card .client-img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    
+    .client-card .star-rating {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #f5c518;
+    }
+    

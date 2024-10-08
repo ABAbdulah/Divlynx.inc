@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body, html {
+  font-size: 16px; /* Base font size for rem units */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.vision-wrapper {
+  text-align: center;
+  margin-top: 1.25rem; /* 20px */
+}
+
+.vision-heading1 {
+  color: #797979;
+  margin-bottom: 0.625rem; /* 10px */
+  font-size: 1.5rem; /* 24px */
+  margin-top: 0.625rem; /* 10px */
+  text-align: left;
+  margin-left: 3.75rem; /* 60px */
+}
+
+.vision-heading2 {
+  color: #2c2c2c;
+  margin-bottom: 0.625rem; /* 10px */
+  font-size: 5rem; /* 80px */
+  margin-top: 0.625rem; /* 10px */
+  text-align: left;
+  margin-left: 3.75rem; /* 60px */
+  animation: slideInLeft 1s ease-out;
+}
+
+.vision-section {
+  background-image: url('../assets/main6.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 1.25rem; /* 20px */
+  position: relative;
+  margin-top: 2.5rem; /* 40px */
+  overflow: hidden;
+}
+
+.vision-content {
+  text-align: left;
+  max-width: 62.5rem; /* 1000px */
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.8;
+  z-index: 1;
+  margin-left: 3.75rem; /* 60px */
+}
+
+.vision-text {
+  font-size: 1.525rem; /* 18px */
+  line-height: 1.8;
+  text-align: justify;
+  opacity: 0;
+  transform: translateY(1.25rem); /* 20px */
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+.vision-text.animate {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Slide in */
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.vision-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: -1;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes expand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 12.5rem; /* 200px */
+  }
+}
+
+.dynamic-headline-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1.25rem; /* 20px */
+  padding: 0.625rem; /* 10px */
+  margin-top: 1.25rem; /* 20px */
+}
+
+.icon {
+  display: inline-block;
+  width: 3.2rem; /* 60px */
+  height: 3.2rem; /* 60px */
+  margin: 1rem; /* 20px */
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vision-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6.25rem; /* 100px */
+  height: auto;
+  padding: 0.625rem; /* 10px */
+  margin-left: 3.125rem; /* 50px */
+  margin-top: 0.625rem; /* 10px */
+  opacity: 1; /* Ensure full opacity */
+  transition: none; /* Disable transitions if any are applied globally */
+}
+
+/* Media Queries */
+
+/* Tablets and below */
+@media (max-width: 48rem) { /* 768px */
+  .vision-heading1 {
+    font-size: 1.25rem; /* 20px */
+    margin-left: 2.5rem; /* 40px */
+  }
+
+  .vision-heading2 {
+    font-size: 3.75rem; /* 60px */
+    margin-left: 2.5rem; /* 40px */
+  }
+
+  .vision-content {
+    font-size: 1rem; /* 16px */
+    margin-left: 2.5rem; /* 40px */
+  }
+  .vision-content p{
+    font-size: 22px;
+  }
+  .dynamic-headline-bar {
+    margin-bottom: 1rem; /* 16px */
+    margin-top: 1rem; /* 16px */
+  }
+
+  .icon {
+    width: 3rem; /* 48px */
+    height: 3rem; /* 48px */
+    margin: 1rem; /* 16px */
+  }
+
+  .vision-logo {
+    width: 5rem; /* 80px */
+    margin-left: 2.5rem; /* 40px */
+    margin-top: 0.5rem; /* 8px */
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 30rem) { /* 480px */
+  .vision-heading1 {
+    font-size: 1rem; /* 16px */
+    margin-left: 1.25rem; /* 20px */
+  }
+
+  .vision-heading2 {
+    font-size: 2.5rem; /* 40px */
+    margin-left: 1.25rem; /* 20px */
+  }
+  .vision-content p{
+    font-size: 18px;
+  }
+  .vision-content {
+    font-size: 0.875rem; /* 14px */
+    margin-left: 1.25rem; /* 20px */
+  }
+
+  .dynamic-headline-bar {
+    margin-bottom: 0.75rem; /* 12px */
+    margin-top: 0.75rem; /* 12px */
+  }
+
+  .icon {
+    width: 2.5rem; /* 40px */
+    height: 2.5rem; /* 40px */
+    margin: 0.75rem; /* 12px */
+  }
+
+  .vision-logo {
+    width: 4rem; /* 64px */
+    margin-left: 1.25rem; /* 20px */
+    margin-top: 0.375rem; /* 6px */
+  }
+}

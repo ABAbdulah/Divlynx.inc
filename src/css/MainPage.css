@@ -1,0 +1,91 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}    /* Positioning for video container */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.videoTag {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+    /* Logo positioning */
+    .logo, .navbar {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        max-width: 100px;
+    }
+
+ /* Navbar styling */
+.navbar {
+    margin: 20px;
+    left: 700px; /* Adjusted left position */
+}
+
+/* Custom Navbar Link Styles */
+.navbar .nav-link {
+    color: white !important;  /* White text color for the links */
+    background-color: rgba(255, 255, 255, 0.2); /* Light transparent background */
+    border-radius: 30px; /* Oval shape for the buttons */
+    padding: 10px 25px; /* Adjust padding for button size */
+    margin: 0 15px; /* Add spacing between the buttons */
+    font-size: 1.2rem; /* Slightly increase text size */
+    text-align: center; /* Center-align the text inside the button */
+    display: inline-block; /* Make sure buttons are inline */
+    width: 150px;
+}
+
+.navbar .nav-link:hover {
+    background-color: rgb(245, 229, 229); /* Slightly more opaque on hover */
+    color: #261e9d !important; /* Change text color on hover */
+}
+
+
+    /* Heading container styling */
+    .heading-container {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        text-align: left;
+        color: white;
+    }
+
+    /* Button styling */
+    .heading-container .btn {
+        margin-right: 10px; /* Add space between buttons */
+        padding: 10px 20px; /* Increase padding inside buttons */
+        border-radius: 30px; /* Make the buttons oval-shaped */
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    /* Heading text styling */
+    .Heading-css {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: left;
+    }
+    @media (min-width: 992px) {
+        .navbar-collapse {
+            background: transparent !important; /* Transparent background on larger screens */
+        }
+    }
+    
+    /* Add background for mobile screens */
+    @media (max-width: 11px) {
+        .navbar-collapse {
+            background: rgba(0, 0, 0, 0.8); /* Dark background for mobile view */
+            padding: 10px;
+            border-radius: 8px;
+        }
+    }

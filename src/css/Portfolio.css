@@ -1,0 +1,45 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .margin-top{
+    margin-top: 40px;
+    margin-bottom: 40px;
+  
+  }
+  .card-body {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      background-color: white; /* Ensure there's a contrasting background */
+    }
+    
+    .card-text {
+      margin-top: 1rem;
+      color: #333; /* Set to a dark color for visibility */
+      text-align: center;
+    }
+   
+    .full-width-banner {
+      background-color: #e85e53;
+      color: white;
+      padding: 0.75rem;
+      text-align: center;
+      width: 100vw; /* Full width relative to viewport */
+      margin: 0; 
+      font-weight: bold;
+    }
+    .video-container {
+      width: 100%; /* Ensures the video fits inside its container */
+      height: auto; /* Adjust height dynamically */
+      max-height: 400px; /* Max height to maintain good size */
+      object-fit: cover;
+      border-radius: 8px;
+      overflow: hidden;
+      display: block;
+      margin: 0 auto; /* Center the video */
+    }
+    
+   
