@@ -12,6 +12,7 @@ import ContactUs from './Contactus';
 function Portfolio() {
   return (
  <>
+ <div id='portfolio'>
     <div className='margin-top'>
     
     <h2 className="text-center mb-4">Explore Some of Our Latest Projects</h2>
@@ -51,6 +52,7 @@ function Portfolio() {
 </Row>
     </Container>
     </div>
+</div>
     <ContactUs/>
     </>
   );

@@ -50,6 +50,7 @@ const Technologies = () => {
 
   return (
     <>
+    <div id='motive'>
     <div className="vision-wrapper">
       <div className="dynamic-headline-bar">
         <div className="icon-container">
@@ -90,6 +91,7 @@ const Technologies = () => {
       </section>
     </div>
    <Services/>
+   </div>
     </>
   );
 }

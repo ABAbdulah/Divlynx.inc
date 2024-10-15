@@ -3,6 +3,10 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaEnvelope, FaTiktok } from 'react
 import '../css/Footer.css';
 import backgroundImage from '../assets/footer2.jpg';
 import logoImage from '../assets/4.png';
+import { Link } from 'react-scroll';
+import { Navbar } from 'react-bootstrap';
+import GotoTop from './GotoTop';
+import ScrolltoTopButton from './ScrolltoTopButton';
 
 const Footer = () => {
   const footerRef = useRef(null);
@@ -13,7 +17,7 @@ const Footer = () => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-          }
+          } 
         });
       },
       {
@@ -37,12 +41,25 @@ const Footer = () => {
   }, []);
 
   return (
+    <>
+    <GotoTop/>
+
     <footer className="footer" ref={footerRef}>
       <div className="footer-background" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
       <div className="footer-content">
         <div className="footer-logo">
-          <img src={logoImage} alt="Company Logo" />
+
+        <Navbar.Brand href="#">
+        <Link to="motive" spy={true} smooth={true} offset={-50} duration={500} onSetActive={() => console.log('Scrolling to motive')}>
+              <img
+                  src={logoImage}
+                  alt="ElClub Logo"
+                  style={{ height: '80px' }}
+                />
+              </Link>
+            </Navbar.Brand>
         </div>
+       
         <div className="footer-section">
           <h3>Services</h3>
           <ul>
@@ -74,10 +91,9 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Follow Us</h3>
           <ul className="social-media">
-            <li><a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer"><FaFacebook /></a></li>
-            <li><a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer"><FaInstagram /></a></li>
-            <li><a href="https://www.linkedin.com/company/your-company" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a></li>
-            <li><a href="https://www.tiktok.com/@your-profile" target="_blank" rel="noopener noreferrer"><FaTiktok /></a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61560996815237" target="_blank" rel="noopener noreferrer"><FaFacebook /></a></li>
+            <li><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2FdivLynxinc%3Ffbclid%3DIwZXh0bgNhZW0CMTAAAR1jVa6iNn7a0hnzismVB3r0xQrWbeQjjK2o5S847Dsyx7lHdDT9tPMqmLU_aem_W58cc585hA8EJevN19TSrA&h=AT2_ndIwLyFThi2zVY1oITxsL-ZVh96YByMY5xxxbHvm8GfZL0NIV8XhphI_yyvHn1x6kgPojnpVZOaEnfphffbsfZpka0P4suqE9Y84x7vauCLN61DIiwyykzUuf8zesaSX" target="_blank" rel="noopener noreferrer"><FaInstagram /></a></li>
+            <li><a href="https://www.linkedin.com/company/divlynx/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a></li>
           </ul>
         </div>
       </div>
@@ -85,6 +101,7 @@ const Footer = () => {
         &copy; 2024 divlynx Inc. All rights reserved.
       </div>
     </footer>
+    </>
   );
 };
 

@@ -106,7 +106,7 @@ const Services = () => {
   return (
     <>
   
-    <div className="services-container">
+    <div className="services-container" id='services'>
       <h2 className='h11' ref={h2Ref}>
         Elevate Your Digital Potential with Our <span className="highlight">Expert Solutions</span>
       </h2>     

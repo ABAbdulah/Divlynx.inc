@@ -1,0 +1,45 @@
+/* Reset body padding caused by the fixed-top navbar */
+body {
+    margin: 0;
+  }
+  
+  .my-navbar {
+    transition: background-color 0.3s ease;
+  }
+  
+  .my-navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.85); /* Darker background on scroll */
+  }
+  
+  .navbar-brand img {
+    max-height: 40px;
+    width: auto;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-nav .nav-link {
+    color: white !important;
+    padding: 0.75rem 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #f8d210 !important; /* Yellow on hover */
+  }
+  
+  /* For smaller screens: Adjust spacing between nav links */
+  @media (max-width: 991px) {
+    .navbar-nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+  
+  /* Optional: Ensure smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  

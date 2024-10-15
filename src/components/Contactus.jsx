@@ -5,13 +5,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import '../css/ContactUs.css'; // Import your custom CSS file
-import contactImg from '../assets/logo.png'
+import contactImg from '../assets/inspiration.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Footer from './Footer';
 function ContactUs() {
   return (
     <>
+    <div id='contact'>
       <div className="text-center">
         <h1>Tell Us About Your Idea</h1>
       </div>
@@ -24,7 +25,7 @@ function ContactUs() {
       <div className="container-fluid mt-5"> {/* Make the container full-width */}
   <Row className="align-items-center">
     {/* Left side for the image */}
-    <Col md={6} className="position-relative">
+    <Col md={5} className="position-relative">
       <Image
         src={contactImg}
         alt="Team Meeting"
@@ -35,10 +36,15 @@ function ContactUs() {
         <h2>Be the Leader, <br /> Make it Happen.</h2>
       </div>
     </Col>
-
-
           {/* Right side for the form */}
           <Col md={6} className="form-col"> {/* Keep md={6} to ensure equal column sizes */}
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-md-4 text-center">
+                <h1>Contact Us</h1>
+              </div>
+            </div>
+          </div>
             <Form>
               <Form.Group className="mb-3" controlId="formFirstName">
                 <Form.Label>First Name</Form.Label>
@@ -88,6 +94,7 @@ function ContactUs() {
         </Row>
       </div>
 <Footer/>
+</div>
     </>
   );
 }
